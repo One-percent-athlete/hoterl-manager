@@ -1,28 +1,21 @@
 export default function Header() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-            <a className="navbar-brand" href="#">Hotel Manager</a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-                <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li className="nav-item">
-                <a className="nav-link" href="#">Features</a>
-                </li>
-                <li className="nav-item">
-                <a className="nav-link" href="#">Pricing</a>
-                </li>
-                <li className="nav-item">
-                <a className="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            </div>
-        </div>
-    </nav>
+    <div className="container">
+        <header className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <span className="fs-4">Hotel Manager</span>
+        </a>
+
+        <ul className="nav nav-pills">
+            <li className="nav-item"><a href="#" className="nav-link active text-white bg-gray" aria-current="page">Home</a></li>
+            <li className="nav-item"><a href="#" className="nav-link text-body-secondary">Gallery</a></li>
+            <li className="nav-item"><a href="#" className="nav-link text-body-secondary">Services</a></li>
+            <li className="nav-item"><a href="#" className="nav-link text-body-secondary">About</a></li>
+            <li className="nav-item"><a href="#" className="nav-link text-body-secondary">Contact</a></li>
+            <li className="nav-item"><a href="#" className="nav-link btn btn-primary btn-sm bg-dark text-white mx-1">Book Event</a></li>
+            <li className="nav-item"><a href="#" className="nav-link btn btn-primary btn-sm bg-dark text-white mx-1">Book Room</a></li>
+        </ul>
+        </header>
+    </div>
   );
 }
