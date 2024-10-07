@@ -1,10 +1,9 @@
-
-export default function Home() {
+export default function Header() {
   return (
     <div>
       <main>
         <h2>
-          This is the home page
+          This is the Header 
         </h2>
       </main>
     </div>
