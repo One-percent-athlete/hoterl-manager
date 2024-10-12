@@ -1,6 +1,7 @@
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Bootstrap from "@/components/common/bootstrap";
 
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
         <div className="container">
           {children}
         </div>
+        <Bootstrap />
         <Footer />
       </body>
     </html>
