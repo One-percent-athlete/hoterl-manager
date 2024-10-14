@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "font-awesome/css/font-awesome.min.css";
 import Bootstrap from "@/components/common/bootstrap";
 
 import Header from "@/components/common/Header";
