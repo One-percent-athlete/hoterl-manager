@@ -1,7 +1,8 @@
-import Header from "@/components/common/Header";
-import Footer from "@/components/common/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Bootstrap from "@/components/common/bootstrap";
+
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 
 export const metadata = {
