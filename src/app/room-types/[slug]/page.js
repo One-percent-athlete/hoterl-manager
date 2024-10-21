@@ -58,9 +58,9 @@ export default function Page() {
                 </label>
                 <input type="date" className="form-control" />
               </div>
-              <button className="btn hms-bg-dark" type="button">
+              <Link href="/payment" className="btn hms-bg-dark" type="button">
                 Confirm Booking
-              </button>
+              </Link>
             </div>
           </div>
         </div>
