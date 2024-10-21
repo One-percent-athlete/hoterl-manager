@@ -2,7 +2,7 @@ import {Pacifico} from 'next/font/google';
 const pacifico = Pacifico({ subsets: ['latin'], weight:"400" })
 export default function Header() {
   return (
-    <div style={{'backgroundColor':'#416284'}} data-bs-theme="dark">
+    <div className="hms-bg-dark" data-bs-theme="dark">
       <div className="container">
         <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom" >
           <div className="col-md-3 mb-2 mb-md-0">

@@ -5,6 +5,7 @@ import Bootstrap from "@/components/common/bootstrap";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 
+import '../../styles/global.css';
 
 export const metadata = {
   title: "Hotel Manager",
