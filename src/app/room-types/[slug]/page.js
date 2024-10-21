@@ -31,24 +31,36 @@ export default function Page() {
             <div className="card-body">
               <div className="mb-3">
                 <label for="exampleFormControlInput1" className="form-label">
-                  Email address
+                  <b>Room Type:</b>　Single
                 </label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="name@example.com"
-                />
               </div>
               <div className="mb-3">
-                <label for="exampleFormControlTextarea1" className="form-label">
-                  Example textarea
+                <label for="exampleFormControlInput1" className="form-label">
+                  <b>Cost:</b>　$ 300 / night
                 </label>
-                <textarea
-                  className="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"></textarea>
               </div>
+              <hr />
+              <div className="mb-3">
+                <label for="exampleFormControlInput1" className="form-label">
+                  <b>Total Guest</b>
+                </label>
+                <input type="number" className="form-control" />
+              </div>
+              <div className="mb-3">
+                <label for="exampleFormControlInput1" className="form-label">
+                  <b>Check In</b>
+                </label>
+                <input type="date" className="form-control" />
+              </div>
+              <div className="mb-3">
+                <label for="exampleFormControlInput1" className="form-label">
+                  <b>Check Out</b>
+                </label>
+                <input type="date" className="form-control" />
+              </div>
+              <button className="btn hms-bg-dark" type="button">
+                Confirm Booking
+              </button>
             </div>
           </div>
         </div>
