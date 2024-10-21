@@ -8,20 +8,20 @@ export default function Header() {
       <div className="container">
         <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           <div className="col-md-3 mb-2 mb-md-0">
-            <a
+            <Link
               href="/"
               className={`d-inline-flex link-body-emphasis text-decoration-none hms-color-light fs-3 fw-bolder navbar-brand ${pacifico.className}`}>
               Hotel Manager
-            </a>
+            </Link>
           </div>
 
           <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li>
-              <a
-                href="#"
+              <Link
+                href="/"
                 className="nav-link px-2 link-body-emphasis text-decoration-none text-info fw-semibold">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#" className="nav-link px-2 link-light">
