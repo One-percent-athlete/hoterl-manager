@@ -2,10 +2,11 @@
     color: #f8f9fa;
 }
 
-.hms-bg-dark {
+.hms-bg-dark, .hms-bg-dark:hover {
     background-color: #416284;
 }
 
 .hms-bg-normal {
     background-color: #17a2b8;
 }
+
