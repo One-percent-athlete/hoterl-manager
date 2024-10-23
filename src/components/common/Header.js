@@ -52,6 +52,15 @@ export default function Header() {
             <button type="button" className="btn btn-info">
               Book Room
             </button>
+            <Link href="/user/dashboard" class="ms-2 text-decoration-none" aria-expanded="false">
+              <img
+                src="/banners/user.jpg"
+                alt="mdo"
+                width="32"
+                height="32"
+                class="rounded-circle"
+              />
+            </Link>
           </div>
         </header>
       </div>
