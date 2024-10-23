@@ -13,28 +13,28 @@ export default function Page() {
               <h3 className="mb-3">Signup</h3>
               <div class="row">
                 <div class="col-md-6 col-12 mb-3">
-                  <label className="form-labrl">First Name</label>
+                  <label className="form-label">First Name</label>
                   <input type="text" class="form-control" />
                 </div>
                 <div class="col-md-6 col-12 mb-3">
-                  <label className="form-labrl">Last Name</label>
+                  <label className="form-label">Last Name</label>
                   <input type="text" class="form-control" />
                 </div>
 
                 <div class="col-md-6 col-12 mb-3">
-                  <label className="form-labrl">Username</label>
+                  <label className="form-label">Username</label>
                   <input type="text" class="form-control" />
                 </div>
                 <div class="col-md-6 col-12 mb-3">
-                  <label className="form-labrl">Email</label>
+                  <label className="form-label">Email</label>
                   <input type="email" class="form-control" />
                 </div>
                 <div class="col-12 mb-3">
-                  <label className="form-labrl">Password</label>
+                  <label className="form-label">Password</label>
                   <input type="password" class="form-control" />
                 </div>
                 <div class="col-12 mb-3">
-                  <label className="form-labrl">Confirm Password</label>
+                  <label className="form-label">Confirm Password</label>
                   <input type="password" class="form-control" />
                 </div>
                 <div className="col-md-6 col-12 mb-3">
