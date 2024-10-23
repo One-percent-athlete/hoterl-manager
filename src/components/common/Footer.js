@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="col mb-3"></div>
 
           <div className="col mb-3">
-            <h5 className="text-white">Section</h5>
+            <h5 className="text-white">About</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-body-secondary">
@@ -29,45 +29,25 @@ export default function Footer() {
               </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-body-secondary">
-                  Features
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  Pricing
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  FAQs
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
                   About
+                </a>
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">
+                  Gallery
+                </a>
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">
+                  Services
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="col mb-3">
-            <h5 className="text-white">Section</h5>
+            <h5 className="text-white">Contact</h5>
             <ul className="nav flex-column">
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  Features
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  Pricing
-                </a>
-              </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-body-secondary">
                   FAQs
@@ -75,14 +55,14 @@ export default function Footer() {
               </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-body-secondary">
-                  About
+                  Contact
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="col mb-3">
-            <h5 className="text-white">Section</h5>
+            <h5 className="text-white">User</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-body-secondary">
@@ -91,22 +71,12 @@ export default function Footer() {
               </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-body-secondary">
-                  Features
+                  Dashboard
                 </a>
               </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-body-secondary">
-                  Pricing
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  FAQs
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  About
+                  Profile
                 </a>
               </li>
             </ul>
