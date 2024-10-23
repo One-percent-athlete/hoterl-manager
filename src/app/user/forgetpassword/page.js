@@ -10,18 +10,14 @@ export default function Page() {
               <img src="/banners/2.jpg" className="img-fluid" />
             </div>
             <div className="col-md-6 col-12 mb-3">
-              <h3 className="mb-3">Change Password</h3>
+              <h3 className="mb-3">Forget Password</h3>
               <div class="row">
                 <div class="col-12 mb-3">
-                  <label className="form-label">New Password</label>
-                  <input type="password" class="form-control" />
-                </div>
-                <div class="col-12 mb-3">
-                  <label className="form-label">Confirm Password</label>
-                  <input type="password" class="form-control" />
+                  <label className="form-label">Email</label>
+                  <input type="email" class="form-control" />
                 </div>
                 <div className="col-md-6 col-12 mb-3">
-                  <button className="btn hms-bg-dark">Submit</button>
+                  <button className="btn hms-bg-dark">Send Link</button>
                 </div>
                 <p>
                   Not a user yet? <Link href="/user/signup">Sign up</Link>

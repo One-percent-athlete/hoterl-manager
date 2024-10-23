@@ -26,7 +26,9 @@ export default function Page() {
                   <input type="text" class="form-control" />
                 </div>
                 <div class="col-md-6 col-12 mb-3">
-                  <label className="form-label">Email</label>
+                  <label className="form-label" aria-required>
+                    Email
+                  </label>
                   <input type="email" class="form-control" />
                 </div>
                 <div class="col-12 mb-3">
