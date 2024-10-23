@@ -48,8 +48,13 @@ export default function Page() {
               </tr>
               <tr>
                 <td>
-                  <button className="btn btn-danger">Cancel Booking</button>
-                  <button className="btn btn-success ms-2">Pay Now</button>
+                  <button className="btn btn-secondary">Cancel Booking</button>
+                  <Link href="/payment/success" className="btn btn-success ms-2">
+                    Pay Now (Success)
+                  </Link>
+                  <Link href="/payment/failure" className="btn btn-danger ms-2">
+                    Pay Now (Failure)
+                  </Link>
                 </td>
               </tr>
             </tbody>
