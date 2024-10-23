@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Page() {
   return (
     <section className="container my-5">
@@ -35,8 +37,14 @@ export default function Page() {
                   <label className="form-labrl">Confirm Password</label>
                   <input type="password" class="form-control" />
                 </div>
+                <div className="col-md-6 col-12 mb-3">
+                  <button className="btn btn-secondary">Reset</button>
+                  <button className="btn hms-bg-dark ms-2">Submit</button>
+                </div>
+                <p>
+                  Already a user? <Link href="/user/login">Login</Link>
+                </p>
               </div>
-              <button className="btn hms-bg-dark">Submit</button>
             </div>
           </div>
         </div>
