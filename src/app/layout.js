@@ -1,28 +1,27 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "font-awesome/css/font-awesome.min.css";
-import Bootstrap from "@/components/common/bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'font-awesome/css/font-awesome.min.css'
+import Bootstrap from '@/components/common/bootstrap'
+import Link from 'next/link'
 
-import Header from "@/components/common/Header";
-import Footer from "@/components/common/Footer";
+import Header from '@/components/common/Header'
+import Footer from '@/components/common/Footer'
 
-import '../../styles/global.css';
+import '../../styles/global.css'
 
 export const metadata = {
-  title: "Hotel Manager",
-  description: "The best hotel management system ever",
-};
+  title: 'Hotel Manager',
+  description: 'The best hotel management system ever',
+}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
         <Header />
-        <div className="container">
-          {children}
-        </div>
+        <div className="container">{children}</div>
         <Bootstrap />
         <Footer />
       </body>
     </html>
-  );
+  )
 }
