@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import BarChart from '@/components/user/Chart'
 import DashboardSidebar from '@/components/user/DashboardSidebar'
 
 export default function Page() {
@@ -17,7 +16,7 @@ export default function Page() {
                   <h4 className="card-title">Total Bookings</h4>
                   <hr></hr>
                   <h5>
-                    <Link href="/user/booking">23</Link>
+                    <a href="/user/booking">23</a>
                   </h5>
                 </div>
               </div>
@@ -32,12 +31,6 @@ export default function Page() {
                   </h5>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="row my-4">
-            <div className="col-12" id="paymentChart">
-              <BarChart />
             </div>
           </div>
         </div>
