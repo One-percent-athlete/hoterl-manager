@@ -17,7 +17,7 @@ export default function Page() {
                   <h4 className="card-title">Total Bookings</h4>
                   <hr></hr>
                   <h5>
-                    <Link href="/user/booking">23</Link>
+                    <Link href="/user/room_history">23</Link>
                   </h5>
                 </div>
               </div>
@@ -28,7 +28,7 @@ export default function Page() {
                   <h4 className="card-title">Total Payments</h4>
                   <hr></hr>
                   <h5>
-                    <a href="#">$ 25000</a>
+                    <Link href="#">$ 25000</Link>
                   </h5>
                 </div>
               </div>

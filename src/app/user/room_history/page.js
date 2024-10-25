@@ -4,6 +4,7 @@ import DashboardSidebar from '@/components/user/DashboardSidebar'
 export default function Page() {
   return (
     <section className="container my-5">
+      <h3 className="my-3">Room Booking History</h3>
       <div className="row">
         <div className="col-md-4 col-12">
           <DashboardSidebar />

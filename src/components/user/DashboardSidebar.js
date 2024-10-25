@@ -12,9 +12,14 @@ export default function DashboardSidebar() {
         Dashboard
       </Link>
       <Link
-        className={`list-group-item ${pathname == '/user/history' ? 'hms-bg-dark' : ''}`}
-        href="/user/history">
-        Booking History
+        className={`list-group-item ${pathname == '/user/room_history' ? 'hms-bg-dark' : ''}`}
+        href="/user/room_history">
+        Room Booking History
+      </Link>
+      <Link
+        className={`list-group-item ${pathname == '/user/event_history' ? 'hms-bg-dark' : ''}`}
+        href="/user/event_history">
+        Event Booking History
       </Link>
       <Link
         className={`list-group-item ${pathname == '/user/paylogs' ? 'hms-bg-dark' : ''}`}
