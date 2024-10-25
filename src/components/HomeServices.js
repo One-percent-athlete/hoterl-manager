@@ -12,8 +12,8 @@ export default function HomeServices() {
             </Link>
             <div className="card-body hms-bg-dark text-white">
               <h5 className="card-title">
-                <Link href="room-types" className="text-white">
-                  Room Types
+                <Link href="/rooms" className="text-white">
+                  Rooms
                 </Link>
               </h5>
             </div>

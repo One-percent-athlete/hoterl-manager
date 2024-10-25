@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import RoomTypeImages from '@/components/RoomTypeImages'
+import RoomImages from '@/components/RoomImages'
 
 export default function Page() {
   return (
@@ -7,7 +7,7 @@ export default function Page() {
       <h3 className="my-5 text-center">Room Details</h3>
       <div className="row">
         <div className="col-5">
-          <RoomTypeImages />
+          <RoomImages />
           <h4 className="my-5">Amenities</h4>
           <div className="col-5">
             <p>

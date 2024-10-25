@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import BarChart from '@/components/user/Chart'
 import DashboardSidebar from '@/components/user/DashboardSidebar'
 
 export default function Page() {

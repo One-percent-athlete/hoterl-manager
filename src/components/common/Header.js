@@ -46,12 +46,12 @@ export default function Header() {
           </ul>
 
           <div className="col-md-3 text-end">
-            <button type="button" className="btn btn-outline-info me-2">
+            <Link className="btn btn-outline-info me-2" href="/events">
               Book Event
-            </button>
-            <button type="button" className="btn btn-info">
+            </Link>
+            <Link className="btn btn-info" href="/rooms">
               Book Room
-            </button>
+            </Link>
             <Link href="/user/dashboard" class="ms-2 text-decoration-none" aria-expanded="false">
               <img
                 src="/banners/user.jpg"
