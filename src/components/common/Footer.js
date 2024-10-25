@@ -29,7 +29,7 @@ export default function Footer() {
               </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-body-secondary">
-                  About
+                  Dashboard
                 </a>
               </li>
               <li className="nav-item mb-2">
@@ -47,36 +47,42 @@ export default function Footer() {
 
           <div className="col mb-3">
             <h5 className="text-white">Contact</h5>
+            <p>
+              <a href="#">
+                <i className="fa fa-facebook text-white text-decoration-none me-3"></i>
+              </a>
+              <a href="#">
+                <i className="fa fa-instagram text-white text-decoration-none me-3"></i>
+              </a>
+              <a href="#">
+                <i className="fa fa-twitter text-white text-decoration-none me-3"></i>
+              </a>
+              <a href="#">
+                <i className="fa fa-wechat text-white text-decoration-none me-3"></i>
+              </a>
+            </p>
             <ul className="nav flex-column">
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  FAQs
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  Contact
-                </a>
-              </li>
+              <li className="nav-item mb-2 p-0 text-body-secondary">Email: xxx@xxx.com</li>
+              <li className="nav-item mb-2 p-0 text-body-secondary">Mobile: +12 23234 324</li>
             </ul>
           </div>
 
           <div className="col mb-3">
-            <h5 className="text-white">User</h5>
+            <h5 className="text-white">Support</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-body-secondary">
-                  Home
+                <a href="#" className="nav-link p-0 text-body-secondary">
+                  Privacy Policy
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="/user/dashboard" className="nav-link p-0 text-body-secondary">
-                  Dashboard
+                <a href="#" className="nav-link p-0 text-body-secondary">
+                  Terms & Conditions
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="/user/profile" className="nav-link p-0 text-body-secondary">
-                  Profile
+                <a href="#" className="nav-link p-0 text-body-secondary">
+                  FAQs
                 </a>
               </li>
             </ul>
