@@ -24,8 +24,8 @@ export default function Page() {
                   <button className="btn hms-bg-dark">Login</button>
                 </div>
                 <p>
-                  <Link className="text-danger" href="/user/forgetpassword">
-                    Forget password?
+                  <Link className="text-danger" href="/user/forgotpassword">
+                    Forgot password?
                   </Link>
                 </p>
                 <p>

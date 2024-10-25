@@ -10,7 +10,7 @@ export default function Page() {
               <img src="/banners/2.jpg" className="img-fluid" />
             </div>
             <div className="col-md-6 col-12 mb-3">
-              <h3 className="mb-3">Forget Password</h3>
+              <h3 className="mb-3">Forgot Password</h3>
               <div class="row">
                 <div class="col-12 mb-3">
                   <label className="form-label">Email</label>

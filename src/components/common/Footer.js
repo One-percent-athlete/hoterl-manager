@@ -23,7 +23,7 @@ export default function Footer() {
             <h5 className="text-white">About</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <a href="/" className="nav-link p-0 text-body-secondary">
                   Home
                 </a>
               </li>
@@ -65,17 +65,17 @@ export default function Footer() {
             <h5 className="text-white">User</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <a href="/" className="nav-link p-0 text-body-secondary">
                   Home
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <a href="/user/dashboard" className="nav-link p-0 text-body-secondary">
                   Dashboard
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <a href="/user/profile" className="nav-link p-0 text-body-secondary">
                   Profile
                 </a>
               </li>
