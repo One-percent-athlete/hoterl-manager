@@ -1,9 +1,9 @@
 export default function HomeReviews() {
   return (
     <section className="container mt-5">
-      <h3 className="mt-5 mb-5 text-center">
+      <h3 className="my-5 text-center">
         Reviews
-        <a href="#" className="float-end fs-5 btn text-white hms-bg-dark">
+        <a href="/reviews" className="float-end fs-5 btn text-white hms-bg-dark">
           View All
         </a>
       </h3>
