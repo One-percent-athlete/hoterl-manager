@@ -7,7 +7,7 @@ export default function HomeServices() {
       <div className="row text-center">
         <div className="col-4">
           <div className="card" style={{ 'backgroundColor': '#416284' }} data-bs-theme="dark">
-            <Link href="room-types" className="text-white">
+            <Link href="/rooms" className="text-white">
               <img src="banners/banner3.jpg" className="img-thumbnail" />
             </Link>
             <div className="card-body hms-bg-dark text-white">
@@ -21,9 +21,15 @@ export default function HomeServices() {
         </div>
         <div className="col-4">
           <div className="card" style={{ 'backgroundColor': '#416284' }} data-bs-theme="dark">
-            <img src="banners/banner2.jpg" className="img-thumbnail" />
+            <Link href="/events" className="text-white">
+              <img src="banners/banner2.jpg" className="img-thumbnail" />
+            </Link>
             <div className="card-body hms-bg-dark text-white">
-              <h5 className="card-title">Events</h5>
+              <h5 className="card-title">
+                <Link href="/events" className="text-white">
+                  Events
+                </Link>
+              </h5>
             </div>
           </div>
         </div>
