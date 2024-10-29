@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <section className="container my-5">
       <div className="col-10 offset-1">
-        <h3 className="my-5">Contact</h3>
+        <h3 className="my-5">Join Us</h3>
         <div className="row">
           <div className="col-md-6 col-12">
             <img src="/banners/banner3.jpg" className="img-fluid" />
@@ -28,6 +28,10 @@ export default function Page() {
               <input type="number" class="form-control" />
             </div>
             <div class="col-md-12 col-12 mb-3">
+              <label className="form-label">Upload Resume</label>
+              <input type="file" class="form-control"></input>
+            </div>
+            <div class="col-md-12 col-12 mb-3">
               <label className="form-label">Message</label>
               <textarea type="text" class="form-control" />
             </div>
@@ -41,9 +45,6 @@ export default function Page() {
               </Link>
               <button className="btn hms-bg-dark ms-2">Send</button>
             </div>
-            <p>
-              <Link href="/career">Work With Us? </Link>
-            </p>
           </div>
         </div>
       </div>

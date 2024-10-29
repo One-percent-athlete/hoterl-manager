@@ -62,6 +62,12 @@ export default function Footer() {
               </a>
             </p>
             <ul className="nav flex-column">
+              <li className="nav-item mb-2 p-0 text-body-secondary">
+                <Link href="/contact">Contact Us</Link>
+              </li>
+              <li className="nav-item mb-2 p-0 text-body-secondary">
+                <Link href="/career">Join Us</Link>
+              </li>
               <li className="nav-item mb-2 p-0 text-body-secondary">Email: xxx@xxx.com</li>
               <li className="nav-item mb-2 p-0 text-body-secondary">Mobile: +12 23234 324</li>
             </ul>
