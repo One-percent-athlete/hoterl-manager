@@ -1,19 +1,21 @@
 import Link from 'next/link'
 import RoomTypeCard from '@/components/RoomTypeCard'
 
-export default function Page() {
+async function getData() {
+  const res = await fetch('http://127.0.0.1:8000/api/room_types')
+  const data = await res.json()
+  return data
+}
+
+export default async function Page() {
+  const roomTypes = await getData()
   return (
     <section className="container my-5">
       <h3 className="my-5 text-center">Rooms (6)</h3>
       <div className="row text-center">
-        <RoomTypeCard />
-        <RoomTypeCard />
-        <RoomTypeCard />
-        <RoomTypeCard />
-        <RoomTypeCard />
-        <RoomTypeCard />
-        <RoomTypeCard />
-        <RoomTypeCard />
+        {roomTypes.map((item, index) => (
+          <RoomTypeCard item={item} key={index} />
+        ))}
       </div>
       <nav className="">
         <ul className="pagination">

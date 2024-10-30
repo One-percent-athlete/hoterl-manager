@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function RoomTypeCard() {
+export default function RoomTypeCard({ item }) {
   return (
     <div className="col-4 mb-4">
       <div className="card" style={{ 'backgroundColor': '#416284' }} data-bs-theme="dark">
@@ -10,7 +10,7 @@ export default function RoomTypeCard() {
         <div className="card-body hms-bg-dark text-white">
           <h5 className="card-title">
             <Link href="/rooms/single" className="text-white">
-              Single
+              {item.title}
             </Link>
           </h5>
         </div>
