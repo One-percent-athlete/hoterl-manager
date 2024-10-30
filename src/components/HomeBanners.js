@@ -17,11 +17,11 @@ export default function HomeBanners() {
 
   return (
     <Carousel showThumbs={false}>
-      {bannerList.map((item, index) => {
-        ;<div key={index}>
+      {bannerList.map((item, index) => (
+        <div key={index}>
           <img src={item.image} alt={item.title} />
         </div>
-      })}
+      ))}
     </Carousel>
   )
 }
