@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel'
 
 export default function RoomImages() {
   return (
-    <Carousel>
+    <Carousel showThumbs={false}>
       <div>
         <img src="/banners/banner1.jpg" />
         <p className="legend">Legend 1</p>
