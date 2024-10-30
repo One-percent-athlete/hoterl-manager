@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import RoomImages from '@/components/RoomImages'
+import RoomImages from '@/components/RoomDetails'
 
 export default function Page() {
   return (
