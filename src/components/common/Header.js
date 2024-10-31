@@ -52,13 +52,16 @@ export default function Header() {
             <Link className="btn btn-info" href="/rooms">
               Book Room
             </Link>
-            <Link href="/user/dashboard" class="ms-2 text-decoration-none" aria-expanded="false">
+            <Link
+              href="/user/dashboard"
+              className="ms-2 text-decoration-none"
+              aria-expanded="false">
               <img
                 src="/banners/user.jpg"
                 alt="mdo"
                 width="32"
                 height="32"
-                class="rounded-circle"
+                className="rounded-circle"
               />
             </Link>
           </div>

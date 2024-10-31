@@ -8,7 +8,7 @@ export default function HomeBanners() {
   async function fetchData() {
     const banners = await fetch('http://127.0.0.1:8000/api/banners')
     const res = await banners.json()
-    setBannerList(res)
+    setBannerList(res.results)
   }
 
   useEffect(() => {
