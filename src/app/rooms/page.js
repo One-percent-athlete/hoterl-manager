@@ -1,16 +1,17 @@
 import Link from 'next/link'
 import RoomTypeCard from '@/components/RoomTypeCard'
 
-async function getData() {
-  const res = await fetch('http://127.0.0.1:8000/api/room_types', {
+async function getData(page_num) {
+  const res = await fetch('http://127.0.0.1:8000/api/room_types?page=' + page_num, {
     cache: 'no-store',
   })
   const data = await res.json()
   return data
 }
 
-export default async function Page() {
-  const roomTypes = await getData()
+export default async function Page({ searchParams }) {
+  const page = searchParams.page
+  const roomTypes = await getData(page)
   const links = []
   for (let i = 1; i <= roomTypes.count; i++) {
     links.push(
