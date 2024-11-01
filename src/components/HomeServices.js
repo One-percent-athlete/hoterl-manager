@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function HomeServices() {
   return (
-    <section className="container my-5">
+    <section className="container my-5" id="services">
       <h3 className="my-5 text-center">Services</h3>
       <div className="row text-center">
         <div className="col-4">

@@ -5,7 +5,7 @@ import { useState } from 'react'
 export default function HomeGallery() {
   const [toggler, setToggler] = useState(false)
   return (
-    <section className="container mt-5">
+    <section className="container mt-5" id="gallery">
       <FsLightbox
         toggler={toggler}
         sources={[

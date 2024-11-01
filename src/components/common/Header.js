@@ -29,12 +29,12 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#" className="nav-link px-2 link-light">
+              <a href={`/#gallery`} className="nav-link px-2 link-light">
                 Gallery
               </a>
             </li>
             <li>
-              <a href="#" className="nav-link px-2 link-light">
+              <a href={`/#services`} className="nav-link px-2 link-light">
                 Services
               </a>
             </li>

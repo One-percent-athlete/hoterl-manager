@@ -11,29 +11,29 @@ export default function Page() {
             <img src="/banners/banner3.jpg" className="img-fluid" />
           </div>
           <div className="col-md-6 col-12 mb-3">
-            <div class="col-md-12 col-12 mb-3">
+            <div className="col-md-12 col-12 mb-3">
               <label className="form-label" aria-required>
                 Your Name
               </label>
-              <input type="text" class="form-control" />
+              <input type="text" className="form-control" />
             </div>
-            <div class="col-md-12 col-12 mb-3">
+            <div className="col-md-12 col-12 mb-3">
               <label className="form-label" aria-required>
                 Email
               </label>
-              <input type="email" class="form-control" />
+              <input type="email" className="form-control" />
             </div>
-            <div class="col-md-12 col-12 mb-3">
+            <div className="col-md-12 col-12 mb-3">
               <label className="form-label">Mobile</label>
-              <input type="number" class="form-control" />
+              <input type="number" className="form-control" />
             </div>
-            <div class="col-md-12 col-12 mb-3">
+            <div className="col-md-12 col-12 mb-3">
               <label className="form-label">Message</label>
-              <textarea type="text" class="form-control" />
+              <textarea type="text" className="form-control" />
             </div>
-            <div class="col-md-12 col-12 mb-3">
+            <div className="col-md-12 col-12 mb-3">
               <label className="form-label">Captcha Code</label>
-              <input type="text" class="form-control" />
+              <input type="text" className="form-control" />
             </div>
             <div className="col-md-6 col-12 mb-3">
               <Link href="/" className="btn btn-secondary">

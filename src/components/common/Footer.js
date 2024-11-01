@@ -23,24 +23,24 @@ export default function Footer() {
             <h5 className="text-white">About</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-body-secondary">
+                <Link href="/" className="nav-link p-0 text-body-secondary">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
-                  Dashboard
-                </a>
+                <Link href="/about" className="nav-link p-0 text-body-secondary">
+                  About
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <Link href={`/#gallery`} className="nav-link p-0 text-body-secondary">
                   Gallery
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <Link href={`/#services`} className="nav-link p-0 text-body-secondary">
                   Services
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -48,18 +48,18 @@ export default function Footer() {
           <div className="col mb-3">
             <h5 className="text-white">Contact</h5>
             <p>
-              <a href="#">
+              <Link href="#">
                 <i className="fa fa-facebook text-white text-decoration-none me-3"></i>
-              </a>
-              <a href="#">
+              </Link>
+              <Link href="#">
                 <i className="fa fa-instagram text-white text-decoration-none me-3"></i>
-              </a>
-              <a href="#">
+              </Link>
+              <Link href="#">
                 <i className="fa fa-twitter text-white text-decoration-none me-3"></i>
-              </a>
-              <a href="#">
+              </Link>
+              <Link href="#">
                 <i className="fa fa-wechat text-white text-decoration-none me-3"></i>
-              </a>
+              </Link>
             </p>
             <ul className="nav flex-column">
               <li className="nav-item mb-2 p-0 text-body-secondary">
@@ -77,19 +77,19 @@ export default function Footer() {
             <h5 className="text-white">Support</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <Link href="/privacy" className="nav-link p-0 text-body-secondary">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <Link href="/terms" className="nav-link p-0 text-body-secondary">
                   Terms & Conditions
-                </a>
+                </Link>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-body-secondary">
+                <Link href="#" className="nav-link p-0 text-body-secondary">
                   FAQs
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
