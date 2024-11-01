@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="p-0 m-0" style={{ 'backgroundColor': '#416284' }} data-bs-theme="dark">
       <div className="container">
-        <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top">
           <div className="col mb-3">
             <Link
               href="/"

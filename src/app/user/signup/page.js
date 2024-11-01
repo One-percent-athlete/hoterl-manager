@@ -11,33 +11,33 @@ export default function Page() {
             </div>
             <div className="col-md-6 col-12 mb-3">
               <h3 className="mb-3">Signup</h3>
-              <div class="row">
-                <div class="col-md-6 col-12 mb-3">
+              <div className="row">
+                <div className="col-md-6 col-12 mb-3">
                   <label className="form-label">First Name</label>
-                  <input type="text" class="form-control" />
+                  <input type="text" className="form-control" />
                 </div>
-                <div class="col-md-6 col-12 mb-3">
+                <div className="col-md-6 col-12 mb-3">
                   <label className="form-label">Last Name</label>
-                  <input type="text" class="form-control" />
+                  <input type="text" className="form-control" />
                 </div>
 
-                <div class="col-md-6 col-12 mb-3">
+                <div className="col-md-6 col-12 mb-3">
                   <label className="form-label">Username</label>
-                  <input type="text" class="form-control" />
+                  <input type="text" className="form-control" />
                 </div>
-                <div class="col-md-6 col-12 mb-3">
+                <div className="col-md-6 col-12 mb-3">
                   <label className="form-label" aria-required>
                     Email
                   </label>
-                  <input type="email" class="form-control" />
+                  <input type="email" className="form-control" />
                 </div>
-                <div class="col-12 mb-3">
+                <div className="col-12 mb-3">
                   <label className="form-label">Password</label>
-                  <input type="password" class="form-control" />
+                  <input type="password" className="form-control" />
                 </div>
-                <div class="col-12 mb-3">
+                <div className="col-12 mb-3">
                   <label className="form-label">Confirm Password</label>
-                  <input type="password" class="form-control" />
+                  <input type="password" className="form-control" />
                 </div>
                 <div className="col-md-6 col-12 mb-3">
                   <button className="btn btn-secondary">Reset</button>

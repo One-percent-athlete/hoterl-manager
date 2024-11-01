@@ -12,14 +12,14 @@ export default function Page() {
           <div className="card">
             <h3 className="card-header py-2">Change Password</h3>
             <div className="card-body">
-              <div class="row">
-                <div class="col-6 mb-3">
+              <div className="row">
+                <div className="col-6 mb-3">
                   <label className="form-label">New Password</label>
-                  <input type="password" class="form-control" />
+                  <input type="password" className="form-control" />
                 </div>
-                <div class="col-6 mb-3">
+                <div className="col-6 mb-3">
                   <label className="form-label">Confirm Password</label>
-                  <input type="password" class="form-control" />
+                  <input type="password" className="form-control" />
                 </div>
                 <div className="col-md-6 col-12 mb-3">
                   <Link className="btn btn-secondary" href="/user/profile">

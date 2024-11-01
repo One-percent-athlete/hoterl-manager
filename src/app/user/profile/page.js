@@ -12,28 +12,28 @@ export default function Page() {
           <div className="card">
             <h3 className="card-header py-2">Update Profile</h3>
             <div className="card-body">
-              <div class="row">
-                <div class="col-md-2 mb-3">
+              <div className="row">
+                <div className="col-md-2 mb-3">
                   <img src="/banners/user.jpg" width={500} className="img-fluid" />
                 </div>
-                <div class="col-md-5 col-12 mb-3">
+                <div className="col-md-5 col-12 mb-3">
                   <label className="form-label">First Name</label>
-                  <input type="text" class="form-control" />
+                  <input type="text" className="form-control" />
                 </div>
-                <div class="col-md-5 col-12 mb-3">
+                <div className="col-md-5 col-12 mb-3">
                   <label className="form-label">Last Name</label>
-                  <input type="text" class="form-control" />
+                  <input type="text" className="form-control" />
                 </div>
 
-                <div class="col-md-6 col-12 mb-3">
+                <div className="col-md-6 col-12 mb-3">
                   <label className="form-label">Username</label>
-                  <input type="text" class="form-control" />
+                  <input type="text" className="form-control" />
                 </div>
-                <div class="col-md-6 col-12 mb-3">
+                <div className="col-md-6 col-12 mb-3">
                   <label className="form-label" aria-required>
                     Email
                   </label>
-                  <input type="email" class="form-control" />
+                  <input type="email" className="form-control" />
                 </div>
                 <div className="col-md-6 col-12 mb-3">
                   <button className="btn btn-secondary">Reset</button>

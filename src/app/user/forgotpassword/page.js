@@ -11,10 +11,10 @@ export default function Page() {
             </div>
             <div className="col-md-6 col-12 mb-3">
               <h3 className="mb-3">Forgot Password</h3>
-              <div class="row">
-                <div class="col-12 mb-3">
+              <div className="row">
+                <div className="col-12 mb-3">
                   <label className="form-label">Email</label>
-                  <input type="email" class="form-control" />
+                  <input type="email" className="form-control" />
                 </div>
                 <div className="col-md-6 col-12 mb-3">
                   <button className="btn hms-bg-dark">Send Link</button>

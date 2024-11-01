@@ -46,23 +46,14 @@ export default function Header() {
           </ul>
 
           <div className="col-md-3 text-end">
-            <Link className="btn btn-outline-info me-2" href="/events">
+            <Link className="btn btn-info me-2" href="/events">
               Book Event
             </Link>
-            <Link className="btn btn-info" href="/rooms">
+            <Link className="btn btn-info me-2" href="/rooms">
               Book Room
             </Link>
-            <Link
-              href="/user/dashboard"
-              className="ms-2 text-decoration-none"
-              aria-expanded="false">
-              <img
-                src="/banners/user.jpg"
-                alt="mdo"
-                width="32"
-                height="32"
-                className="rounded-circle"
-              />
+            <Link className="btn btn-outline-info me-2" href="/user/signup">
+              Sign Up
             </Link>
           </div>
         </header>
