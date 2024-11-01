@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import RoomImages from '@/components/RoomBanners'
+import RoomImages from '@/components/RoomDetailImages'
 
 async function getData(uuid) {
   const res = await fetch('http://127.0.0.1:8000/api/room_types/' + uuid, {cache: "no-store"})
@@ -14,7 +14,7 @@ export default async function Page({params}) {
       <h3 className="my-5 text-center">{roomDetails.title} Room</h3>
       <div className="row">
         <div className="col-5">
-          <RoomImages />
+          <RoomImages images={roomDetails.room_type_image} />
           <h4 className="my-5">Amenities</h4>
           <div className="col-5">
             <p> 
