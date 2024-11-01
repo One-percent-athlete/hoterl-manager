@@ -13,19 +13,48 @@ export default async function Page({ searchParams }) {
   const page = searchParams.page
   const roomTypes = await getData(page)
   const links = []
-  for (let i = 1; i <= roomTypes.count; i++) {
+  if(roomTypes.previous) {
     links.push(
       <Link
-        className="text-decoration-none text-white page-link hms-bg-dark"
-        href={`/rooms/?page=${i}`}>
-        {i}
+        className="text-decoration-none page-link text-white hms-bg-dark"
+        href={`/rooms/?page=${page - 1}`}>
+        Previous
+      </Link>
+    )
+  }
+  for (let i = 1; i <= roomTypes.count / 2 ; i++) {
+    if (page == i) {
+      links.push(
+        <Link
+          className="text-decoration-none page-link text-dark"
+          href={`/rooms/?page=${i}`}>
+          {i}
+        </Link>
+      )
+    } else {
+      links.push(
+        <Link
+          className="text-decoration-none page-link text-white hms-bg-dark"
+          href={`/rooms/?page=${i}`}>
+          {i}
+        </Link>
+      )
+    }
+  }
+
+  if(roomTypes.next) {
+    links.push(
+      <Link
+        className="text-decoration-none page-link text-white hms-bg-dark"
+        href={`/rooms/?page=${parseInt(page) + parseInt(1)}`}>
+        Next
       </Link>
     )
   }
 
   return (
     <section className="container my-5">
-      <h3 className="my-5 text-center">Rooms (6)</h3>
+      <h3 className="my-5 text-center">Rooms ({roomTypes.count})</h3>
       <div className="row text-center">
         {roomTypes.results.map((item, index) => (
           <RoomTypeCard item={item} />
@@ -33,19 +62,9 @@ export default async function Page({ searchParams }) {
       </div>
       <nav className="">
         <ul className="pagination">
-          <li className="page-item">
-            <a className="page-link hms-bg-dark" href="#">
-              Previous
-            </a>
-          </li>
           {links.map((item, index) => (
             <li className="page-item">{item}</li>
           ))}
-          <li className="page-item">
-            <a className="page-link hms-bg-dark" href="#">
-              Next
-            </a>
-          </li>
         </ul>
       </nav>
     </section>
