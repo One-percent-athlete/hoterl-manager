@@ -1,10 +1,17 @@
 import Link from 'next/link'
-import RoomImages from '@/components/RoomDetails'
+import RoomImages from '@/components/RoomBanners'
 
-export default function Page() {
+async function getData(room_type_id) {
+  const res = await fetch('http://127.0.0.1:8000/api/room_types/' +room_type_id, {cache: "no-store"})
+  const data = await res.json()
+  return data
+}
+export default async function Page() {
+  const room_type_id = 1
+  const roomDetails = await getData(room_type_id)
   return (
     <section className="container my-5">
-      <h3 className="my-5 text-center">Room Details</h3>
+      <h3 className="my-5 text-center">{roomDetails.title} Room</h3>
       <div className="row">
         <div className="col-5">
           <RoomImages />
@@ -22,7 +29,7 @@ export default function Page() {
           </div>
           <h4 className="my-5">Location</h4>
           <div className="col-5">
-            <p>123, Dummy street, Dummy Address</p>
+            <p>{roomDetails.details.location}</p>
           </div>
         </div>
         <div className="col-7">
@@ -58,6 +65,9 @@ export default function Page() {
                 </label>
                 <input type="date" className="form-control" />
               </div>
+              <Link href="/rooms/?page=1" className="btn btn-secondary me-2" type="button">
+                Back To Room Types
+              </Link>
               <Link href="/payment" className="btn hms-bg-dark" type="button">
                 Confirm Booking
               </Link>
