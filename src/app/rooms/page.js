@@ -61,7 +61,7 @@ export default async function Page({searchParams}) {
       <nav className="">
         <ul className="pagination">
           {links.map((item, index) => (
-            <li className="page-item">{item}</li>
+            <li className="page-item" key={index} >{item}</li>
           ))}
         </ul>
       </nav>

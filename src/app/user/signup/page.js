@@ -1,11 +1,33 @@
+"use client"
 import Link from 'next/link'
+import { useState } from "react";
 
 export default function Page() {
+  const [successMsg, setSuccessMsg] = useState(false)
 
   async function handleForm(formData){
-    "use server"
-    console.log(formData);
+    const fd = {
+      'first_name' : formData.get('first_name'),
+      'last_name' : formData.get('last_name'),
+      'username' : formData.get('username'),
+      'email' : formData.get('email'),
+      'password' : formData.get('password'),
+      'profile' : {
+        'phone': formData.get('phone')
+      }
+    }
+    console.log(fd);
     
+    const res = await fetch("http://127.0.0.1:8000/api/signup", {"method": "POST", "body": JSON.stringify(fd), "headers": {
+      "Content-Type":"application/json"
+    }
+  })
+  const resData = await res.text()
+  if (res.ok){
+    setSuccessMsg(true)
+  } else {
+    console.log(resData);
+  }
   }
 
   return (
@@ -13,12 +35,15 @@ export default function Page() {
       <div className="row">
         <div className="col-10 offset-1">
               <h3 className="mb-5 text-center">Signup</h3>
+              {
+                successMsg && <div className="alert alert-success">Thank you for joining us!</div>
+              }
           <div className="row">
             <div className="col-md-6 col-12">
               <img src="/banners/banner1.jpg" className="img-fluid" />
             </div>
-            <div className="col-md-6 col-12 mb-3">
-              <form className="row" action={handleForm}>
+            <form className="col-md-6 col-12 mb-3" action={handleForm}>
+              <div className="row">
                 <div className="col-md-6 col-12 mb-3">
                   <label className="form-label">First Name</label>
                   <input type="text" className="form-control" required name="first_name" />
@@ -29,23 +54,27 @@ export default function Page() {
                 </div>
 
                 <div className="col-md-6 col-12 mb-3">
-                  <label className="form-label">Username</label>
-                  <input type="text" className="form-control" required name="username" />
-                </div>
-                <div className="col-md-6 col-12 mb-3">
-                  <label className="form-label" aria-required>
+                  <label className="form-label">
                     Email
                   </label>
                   <input type="email" className="form-control" required name="email" />
                 </div>
+                <div className="col-md-6 col-12 mb-3">
+                  <label className="form-label">Phone Number</label>
+                  <input type="number" className="form-control" required name="phone" />
+                </div>
+                <div className="col-12 mb-3">
+                  <label className="form-label">Username</label>
+                  <input type="text" className="form-control" required name="username" />
+                </div>
                 <div className="col-12 mb-3">
                   <label className="form-label">Password</label>
-                  <input type="password" className="form-control" required name="password1" />
+                  <input type="password" className="form-control" required name="password" />
                 </div>
-                <div className="col-12 mb-3">
+                {/* <div className="col-12 mb-3">
                   <label className="form-label">Confirm Password</label>
-                  <input type="password" className="form-control" required name="password2" />
-                </div>
+                  <input type="password" className="form-control" name="password1" />
+                </div> */}
                 <div className="col-md-6 col-12 mb-3">
                   <button className="btn btn-secondary">Reset</button>
                   <button className="btn hms-bg-dark ms-2">Submit</button>
@@ -53,8 +82,8 @@ export default function Page() {
                 <p>
                   Already a user? <Link href="/user/login">Login</Link>
                 </p>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
