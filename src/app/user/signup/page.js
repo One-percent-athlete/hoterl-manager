@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function Page() {
   const [successMsg, setSuccessMsg] = useState(false)
+  const [errorMsg, setErrorMsg] = useState("")
 
   async function handleForm(formData){
     const fd = {
@@ -25,8 +26,16 @@ export default function Page() {
   const resData = await res.text()
   if (res.ok){
     setSuccessMsg(true)
+    setErrorMsg("")
   } else {
-    console.log(resData);
+    var errorStr="";
+    for(const [key, values] of Object.entries(resData)){
+      for(let i=0; i<values.length; i++){
+        errorStr+=values[i]
+      }
+    }
+    setSuccessMsg(false)
+    setErrorMsg(errorStr)
   }
   }
 
@@ -37,6 +46,9 @@ export default function Page() {
               <h3 className="mb-5 text-center">Signup</h3>
               {
                 successMsg && <div className="alert alert-success">Thank you for joining us!</div>
+              }
+              {
+                errorMsg && <div className="alert alert-success">{ errorMsg }</div>
               }
           <div className="row">
             <div className="col-md-6 col-12">
