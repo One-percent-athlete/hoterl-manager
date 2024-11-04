@@ -27,7 +27,7 @@ export default function Login() {
         localStorage.setItem('user', JSON.stringify(user))
         setSuccessMsg(true)
         setErrorMsg(false)
-        location.href="user/dashboard"
+        location.href="/user/dashboard"
 
     } else {
         var errorStr=[];
@@ -48,7 +48,7 @@ export default function Login() {
         <div className="col-10 offset-1">
               <h3 className="mb-5 text-center">Login</h3>
               {
-                successMsg && <div className="alert alert-success">Thank you for joining us!</div>
+                successMsg && <div className="alert alert-success">Welcome back!</div>
               }
               {
                 errorMsg && <div className="alert alert-warning">{ errorMsg }</div>

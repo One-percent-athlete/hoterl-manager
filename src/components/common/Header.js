@@ -51,20 +51,25 @@ export default function Header() {
           </ul>
 
           <div className="col-md-3 text-end">
-            <Link className="btn btn-info me-2" href="/events">
+            {
+              user && user.username!="" &&  <Link className="btn btn-info me-2" href="/events">
               Book Event
             </Link>
-            <Link className="btn btn-info me-2" href="/rooms">
+            }
+            {
+              user && user.username!="" &&  <Link className="btn btn-info me-2" href="/rooms">
               Book Room
             </Link>
+            }
+            
             {
-              user.username=="" && <Link className="btn btn-outline-info me-2" href="/user/signup">Sign Up</Link>
+              !user && <Link className="btn btn-outline-info me-2" href="/user/signup">Sign Up</Link>
             }
             {
-            user.username=="" && <Link className="btn btn-outline-info me-2" href="/user/Login">Login</Link>
+              !user && <Link className="btn btn-outline-info me-2" href="/user/login">Login</Link>
             }
             {
-              user.username!="" && <Link className="btn btn-outline-info me-2" href="/user/logout">Logout</Link>
+              user && user.username!="" && <Link className="btn btn-outline-info me-2" href="/user/logout">Logout</Link>
             }
           </div>
         </header>
