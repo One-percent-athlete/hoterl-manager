@@ -5,7 +5,7 @@ import { useState } from "react"
 export default function Login() {
 
     const [successMsg, setSuccessMsg] = useState(false)
-    const [errorMsg, setErrorMsg] = useState("")
+    const [errorMsg, setErrorMsg] = useState(false)
 
     async function handleForm(formData){
         const fd = {
