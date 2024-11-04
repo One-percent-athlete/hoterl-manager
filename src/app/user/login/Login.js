@@ -1,4 +1,6 @@
+"use client"
 import Link from 'next/link'
+import { useState } from "react"
 
 export default function Login() {
 
@@ -11,7 +13,7 @@ export default function Login() {
         'password' : formData.get('password'),
         }
     
-    const res = await fetch("http://127.0.0.1:8000/api/signup", {"method": "POST", "body": JSON.stringify(fd), "headers": {
+    const res = await fetch("http://127.0.0.1:8000/api/login", {"method": "POST", "body": JSON.stringify(fd), "headers": {
       "Content-Type":"application/json"
     }
   })
@@ -19,7 +21,6 @@ export default function Login() {
     if (res.ok){
         setSuccessMsg(true)
         setErrorMsg("")
-        resestRefButton.current.click()
     } else {
         var errorStr=[];
         for(const [key, values] of Object.entries(resData)){  
@@ -37,23 +38,23 @@ export default function Login() {
     <section className="container my-5">
       <div className="row">
         <div className="col-10 offset-1">
+              <h3 className="mb-5 text-center">Login</h3>
           <div className="row">
             <div className="col-md-6 col-12">
               <img src="/banners/banner2.jpg" className="img-fluid" />
             </div>
-            <div className="col-md-6 col-12 mb-3">
-              <h3 className="mb-3">Login</h3>
+            <form className="col-md-6 col-12 mb-3" action={handleForm}>
               <div className="row">
                 <div className="col-12 mb-3">
                   <label className="form-label">Username</label>
-                  <input type="text" className="form-control" />
+                  <input type="text" className="form-control" name="username" />
                 </div>
                 <div className="col-12 mb-3">
                   <label className="form-label">Password</label>
-                  <input type="password" className="form-control" />
+                  <input type="password" className="form-control" name="password" />
                 </div>
                 <div className="col-md-6 col-12 mb-3">
-                  <button className="btn hms-bg-dark">Login</button>
+                  <button className="btn hms-bg-dark" type="submit">Login</button>
                 </div>
                 <p>
                   <Link className="text-danger" href="/user/forgotpassword">
@@ -64,7 +65,7 @@ export default function Login() {
                   Not a user yet? <Link href="/user/signup">Sign up</Link>
                 </p>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
