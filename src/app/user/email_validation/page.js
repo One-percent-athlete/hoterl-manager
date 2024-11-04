@@ -19,7 +19,7 @@ export default function Page() {
   if (res.ok){
 
     setErrorMsg(false)
-    location.href="/user/email_validation"
+    location.href="/email_validation"
 
 } else {
     var errorStr=[];
@@ -37,7 +37,7 @@ export default function Page() {
     <section className="container my-5">
       <div className="row">
         <div className="col-10 offset-1">
-              <h3 className="mb-5 text-center">Forgot Password</h3>
+              <h3 className="mb-5 text-center">Email Validation</h3>
           <div className="row">
             <div className="col-md-6 col-12">
               <img src="/banners/banner4.jpg" className="img-fluid" />
@@ -45,18 +45,12 @@ export default function Page() {
             <div className="col-md-6 col-12 mb-3">
               <form className="row" action={handleForm}>
                 <div className="col-12 mb-3">
-                  <label className="form-label">Email</label>
+                  <label className="form-label">Enter Code</label>
                   <input type="email" className="form-control" name="email" />
                 </div>
                 <div className="col-md-6 col-12 mb-3">
-                  <button className="btn hms-bg-dark">Send Link</button>
+                  <button className="btn hms-bg-dark">Submit</button>
                 </div>
-                <p>
-                  Not a user yet? <Link href="/user/signup">Sign up</Link>
-                </p>
-                <p>
-                  Return to login? <Link href="/user/login">Login</Link>
-                </p>
               </form>
             </div>
           </div>
