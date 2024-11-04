@@ -17,10 +17,18 @@ export default function Login() {
       "Content-Type":"application/json"
     }
   })
-    const resData = await res.text()
+    const resData = await res.json()
     if (res.ok){
+        var user = {
+            'username':fd.username,
+            'token':resData.token
+        }
+
+        localStorage.setItem('user', JSON.stringify(user))
         setSuccessMsg(true)
-        setErrorMsg("")
+        setErrorMsg(false)
+        location.href="user/dashboard"
+
     } else {
         var errorStr=[];
         for(const [key, values] of Object.entries(resData)){  
@@ -39,6 +47,12 @@ export default function Login() {
       <div className="row">
         <div className="col-10 offset-1">
               <h3 className="mb-5 text-center">Login</h3>
+              {
+                successMsg && <div className="alert alert-success">Thank you for joining us!</div>
+              }
+              {
+                errorMsg && <div className="alert alert-warning">{ errorMsg }</div>
+              }
           <div className="row">
             <div className="col-md-6 col-12">
               <img src="/banners/banner2.jpg" className="img-fluid" />

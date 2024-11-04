@@ -23,7 +23,8 @@ export default function SignupForm() {
       "Content-Type":"application/json"
     }
   })
-  const resData = await res.text()
+  const resData = await res.json()
+  
   if (res.ok){
     setSuccessMsg(true)
     setErrorMsg("")

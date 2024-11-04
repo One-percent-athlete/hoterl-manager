@@ -1,8 +1,13 @@
+"use client"
+
 import Link from 'next/link'
 import { Pacifico } from 'next/font/google'
 
 const pacifico = Pacifico({ subsets: ['latin'], weight: '400' })
 export default function Header() {
+  var user = localStorage.getItem('user')
+  user=JSON.parse(user)
+
   return (
     <div className="hms-bg-dark" data-bs-theme="dark">
       <div className="container">
@@ -52,9 +57,15 @@ export default function Header() {
             <Link className="btn btn-info me-2" href="/rooms">
               Book Room
             </Link>
-            <Link className="btn btn-outline-info me-2" href="/user/signup">
-              Sign Up
-            </Link>
+            {
+              user.username=="" && <Link className="btn btn-outline-info me-2" href="/user/signup">Sign Up</Link>
+            }
+            {
+            user.username=="" && <Link className="btn btn-outline-info me-2" href="/user/Login">Login</Link>
+            }
+            {
+              user.username!="" && <Link className="btn btn-outline-info me-2" href="/user/logout">Logout</Link>
+            }
           </div>
         </header>
       </div>
