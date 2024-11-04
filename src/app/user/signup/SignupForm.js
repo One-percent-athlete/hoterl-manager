@@ -33,7 +33,7 @@ export default function SignupForm() {
     for(const [key, values] of Object.entries(resData)){  
       console.log(values[key]);
          for(let i=0; i<values.length; i++) {
-             errorStr.push(`${values}`)
+             errorStr.push(`${values[i]}`)
          }
     }
     setSuccessMsg(false)
