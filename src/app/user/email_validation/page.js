@@ -8,10 +8,10 @@ export default function Page() {
 
   async function handleForm(formData){
     const fd = {
-    'email' : formData.get('email'),
+    'code' : formData.get('code'),
     }
 
-  const res = await fetch("http://127.0.0.1:8000/api/email_validation", {"method": "POST", "body": JSON.stringify(fd), "headers": {
+  const res = await fetch("http://127.0.0.1:8000/api/code_validation", {"method": "POST", "body": JSON.stringify(fd), "headers": {
     "Content-Type":"application/json"
   }
   })
@@ -19,7 +19,7 @@ export default function Page() {
   if (res.ok){
 
     setErrorMsg(false)
-    location.href="/email_validation"
+    location.href="/user/changepassword"
 
 } else {
     var errorStr=[];
@@ -38,6 +38,9 @@ export default function Page() {
       <div className="row">
         <div className="col-10 offset-1">
               <h3 className="mb-5 text-center">Email Validation</h3>
+              {
+                errorMsg && <div className="alert alert-warning">{ errorMsg }</div>
+              }
           <div className="row">
             <div className="col-md-6 col-12">
               <img src="/banners/banner4.jpg" className="img-fluid" />
@@ -46,7 +49,7 @@ export default function Page() {
               <form className="row" action={handleForm}>
                 <div className="col-12 mb-3">
                   <label className="form-label">Enter Code</label>
-                  <input type="email" className="form-control" name="email" />
+                  <input type="text" className="form-control" name="code" />
                 </div>
                 <div className="col-md-6 col-12 mb-3">
                   <button className="btn hms-bg-dark">Submit</button>

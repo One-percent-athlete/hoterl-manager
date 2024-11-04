@@ -38,6 +38,9 @@ export default function Page() {
       <div className="row">
         <div className="col-10 offset-1">
               <h3 className="mb-5 text-center">Forgot Password</h3>
+              {
+                errorMsg && <div className="alert alert-warning">{ errorMsg }</div>
+              }
           <div className="row">
             <div className="col-md-6 col-12">
               <img src="/banners/banner4.jpg" className="img-fluid" />
