@@ -15,11 +15,11 @@ export default function Page() {
               <div className="row">
                 <div className="col-6 mb-3">
                   <label className="form-label">New Password</label>
-                  <input type="password" className="form-control" />
+                  <input type="password" className="form-control" name="password"/>
                 </div>
                 <div className="col-6 mb-3">
                   <label className="form-label">Confirm Password</label>
-                  <input type="password" className="form-control" />
+                  <input type="password" className="form-control" name="password1"/>
                 </div>
                 <div className="col-md-6 col-12 mb-3">
                   <Link className="btn btn-secondary" href="/user/profile">

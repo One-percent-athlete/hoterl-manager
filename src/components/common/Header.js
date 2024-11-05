@@ -5,8 +5,11 @@ import { Pacifico } from 'next/font/google'
 
 const pacifico = Pacifico({ subsets: ['latin'], weight: '400' })
 export default function Header() {
-  var user = localStorage.getItem('user')
-  user=JSON.parse(user)
+    if (localStorage.getItem('user')){
+      var user = localStorage.getItem('user')
+    } else {
+      user=null
+    }
 
   return (
     <div className="hms-bg-dark" data-bs-theme="dark">

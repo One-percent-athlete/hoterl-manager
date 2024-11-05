@@ -19,7 +19,7 @@ export default function Page() {
   if (resData.error == "" || resData.error == null ){
 
     setErrorMsg(false)
-    location.href="/user/changepassword"
+    location.href="/user/change_password"
 
 } else {
     setErrorMsg(resData.error)
@@ -47,6 +47,9 @@ export default function Page() {
                 <div className="col-md-6 col-12 mb-3">
                   <button className="btn hms-bg-dark">Submit</button>
                 </div>
+                <p>
+                  Return to login? <Link href="/user/login">Login</Link>
+                </p>
               </form>
             </div>
           </div>

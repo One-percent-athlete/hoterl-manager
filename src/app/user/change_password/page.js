@@ -5,32 +5,25 @@ import { useState } from "react"
 
 export default function Page() {
   const [errorMsg, setErrorMsg] = useState(false)
-
+    const userEmail = localStorage.getItem('useremail')
   async function handleForm(formData){
     const fd = {
-    'email' : formData.get('email'),
+    'password' : formData.get('password'),
+    'useremail': userEmail
     }
 
-  const res = await fetch("http://127.0.0.1:8000/api/email_validation", {"method": "POST", "body": JSON.stringify(fd), "headers": {
+  const res = await fetch("http://127.0.0.1:8000/api/change_password", {"method": "POST", "body": JSON.stringify(fd), "headers": {
     "Content-Type":"application/json"
   }
   })
   const resData = await res.json()
   if (resData.error == "" || resData.error == null ){
-
+    localStorage.removeItem('useremail')
     setErrorMsg(false)
-    localStorage.setItem("useremail", JSON.stringify(fd.email))
-    location.href="/user/email_validation"
+    location.href="/user/login"
 
 } else {
-    var errorStr=[];
-    for(const [key, values] of Object.entries(resData)){  
-    console.log(values[key]);
-        for(let i=0; i<values.length; i++) {
-            errorStr.push(`${values[i]}`)
-        }
-    }
-    setErrorMsg(errorStr)
+    setErrorMsg(resData.error)
 }
 }
 
@@ -38,7 +31,7 @@ export default function Page() {
     <section className="container my-5">
       <div className="row">
         <div className="col-10 offset-1">
-              <h3 className="mb-5 text-center">Forgot Password</h3>
+              <h3 className="mb-5 text-center">Change Password</h3>
               {
                 errorMsg && <div className="alert alert-warning">{ errorMsg }</div>
               }
@@ -49,15 +42,12 @@ export default function Page() {
             <div className="col-md-6 col-12 mb-3">
               <form className="row" action={handleForm}>
                 <div className="col-12 mb-3">
-                  <label className="form-label">Email</label>
-                  <input type="email" className="form-control" name="email" />
+                  <label className="form-label">Enter New Password</label>
+                  <input type="password" className="form-control" name="password" />
                 </div>
                 <div className="col-md-6 col-12 mb-3">
-                  <button className="btn hms-bg-dark">Send Link</button>
+                  <button className="btn hms-bg-dark">Submit</button>
                 </div>
-                <p>
-                  Not a user yet? <Link href="/user/signup">Sign up</Link>
-                </p>
                 <p>
                   Return to login? <Link href="/user/login">Login</Link>
                 </p>
