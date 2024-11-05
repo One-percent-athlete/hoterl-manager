@@ -91,7 +91,7 @@ export default function SignupForm() {
                   <input type="password" className="form-control" name="password1" />
                 </div> */}
                 <div className="col-md-6 col-12 mb-3">
-                  <button className="btn btn-secondary" ref={resestRefButton}>Reset</button>
+                  <button className="btn btn-danger" ref={resestRefButton}>Reset</button>
                   <button className="btn hms-bg-dark ms-2">Submit</button>
                 </div>
                 <p>
