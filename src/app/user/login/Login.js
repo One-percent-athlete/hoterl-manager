@@ -18,10 +18,10 @@ export default function Login() {
     }
   })
     const resData = await res.json()
-    if (res.ok){
+    if (resData.error==null){
         var user = {
             'username':fd.username,
-            'token':resData.token
+            'token':resData.token,
         }
 
         localStorage.setItem('user', JSON.stringify(user))
@@ -31,11 +31,14 @@ export default function Login() {
 
     } else {
         var errorStr=[];
-        for(const [key, values] of Object.entries(resData)){  
-        console.log(values[key]);
-            for(let i=0; i<values.length; i++) {
-                errorStr.push(`${values[i]}`)
-            }
+        errorStr.push(<p>{resData.error}</p>)
+        if (typeof resData.error!=="string"){
+          for(const [key, values] of Object.entries(resData)){  
+          console.log(values[key]);
+              for(let i=0; i<values.length; i++) {
+                  errorStr.push(<p>{key}: {values[i]}</p>)
+              }
+          }
         }
         setSuccessMsg(false)
         setErrorMsg(errorStr)
