@@ -6,11 +6,12 @@ export default function BookingForm({roomDetails}) {
 
     const [totalCost, setTotalCost] = useState(0)
     const [totalGuest, setTotalGuest] = useState(1)
+    const [numOfRooms, setNumOfRooms] = useState(1)
     const [checkinDate, setCheckinDate] = useState("")
     const [checkoutDate, setCheckoutDate] = useState("")
-
     const [checkinDateNormal, setCheckinDateNormal] = useState("")
     const [checkoutDateNormal, setCheckoutDateNormal] = useState("")
+    const [details, setDetails] = useState("")
 
     function checkoutDateHandler(e) {
         const _date=e.target.value
@@ -30,10 +31,19 @@ export default function BookingForm({roomDetails}) {
         const _guest=e.target.value
         setTotalGuest(_guest)
     }
+    function numOfRoomsHandler(e) {
+        const _numOfRooms=e.target.value
+        setNumOfRooms(_numOfRooms)
+    }
+
+    function detailsHandler(e) {
+        const _detail=e.target.value
+        setDetails(_detail)
+    }
 
     useEffect(() => {
         const totalDays=Math.ceil(checkoutDate-checkinDate)/(1000*60*60*24)
-        var _totalCost=totalDays*roomDetails.price_per_night*totalGuest
+        var _totalCost=totalDays*roomDetails.price_per_night*numOfRooms
         console.log(totalGuest, checkinDate, checkoutDate, _totalCost);
         setTotalCost(_totalCost)
     },[checkinDateNormal, checkoutDateNormal])
@@ -55,10 +65,16 @@ export default function BookingForm({roomDetails}) {
         </div>
         <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">
-            <b>Cost:</b>　$ {roomDetails.price_per_night} /person /night
+            <b>Cost:</b>　$ {roomDetails.price_per_night} /night
             </label>
         </div>
         <hr />
+        <div className="mb-3">
+            <label htmlFor="exampleFormControlInput1" className="form-label">
+            <b>Number of Rooms</b>
+            </label>
+            <input type="number" className="form-control" name="total_guest" onChange={numOfRoomsHandler} value={numOfRooms}/>
+        </div>
         <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">
             <b>Total Guest</b>
@@ -76,6 +92,12 @@ export default function BookingForm({roomDetails}) {
             <b>Check Out</b>
             </label>
             <input type="date" className="form-control" name="checkout_date" onChange={checkoutDateHandler} value={checkoutDateNormal} />
+        </div>
+        <div className="mb-3">
+            <label htmlFor="exampleFormControlInput1" className="form-label">
+            <b>Details</b>
+            </label>
+            <textarea className="form-control" name="details" onChange={detailsHandler} value={details} />
         </div>
         <hr/>
         <div className="mb-3">
