@@ -16,20 +16,13 @@ export default function Page() {
   }
   })
   const resData = await res.json()
-  if (res.ok){
+  if (resData.error == "" || resData.error == null ){
 
     setErrorMsg(false)
     location.href="/user/changepassword"
 
 } else {
-    var errorStr=[];
-    for(const [key, values] of Object.entries(resData)){  
-    console.log(values[key]);
-        for(let i=0; i<values.length; i++) {
-            errorStr.push(`${values[i]}`)
-        }
-    }
-    setErrorMsg(errorStr)
+    setErrorMsg(resData.error)
 }
 }
 
