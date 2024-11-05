@@ -51,19 +51,25 @@ export default function BookingForm({roomDetails}) {
     const resestRefButton = useRef(null)
     const [errorMsg, setErrorMsg] = useState("")
 
+
+    
+  var user = localStorage.getItem("user")
+  user = JSON.parse(user)
+
+
   async function handleForm(formData){
     const fd = {
-      'first_name' : formData.get('first_name'),
-      'last_name' : formData.get('last_name'),
-      'username' : formData.get('username'),
-      'email' : formData.get('email'),
-      'password' : formData.get('password'),
-      'profile' : {
-        'phone': formData.get('phone')
-      }
+      'room_number' : formData.get('total_rooms'),
+      'user' : user,
+      'booking_date' : "",
+      'total_guest' : formData.get('total_guest'),
+      'checkin_date' : formData.get('checkin_date'),
+      'checkout_date' : formData.get('checkout_date'),
+      'price' : formData.get('total_price'),
+      'booking_details' : formData.get('details'),
     }
     
-    const res = await fetch("http://127.0.0.1:8000/api/signup", {"method": "POST", "body": JSON.stringify(fd), "headers": {
+    const res = await fetch("http://127.0.0.1:8000/api/room_booking", {"method": "POST", "body": JSON.stringify(fd), "headers": {
       "Content-Type":"application/json"
     }
   })
@@ -87,8 +93,6 @@ export default function BookingForm({roomDetails}) {
   }
 
     
-  var user = localStorage.getItem("user")
-  user = JSON.parse(user)
   var bookingUrl= window.location.pathname
   if (user!=null){
       return (
@@ -115,7 +119,7 @@ export default function BookingForm({roomDetails}) {
                 <label htmlFor="exampleFormControlInput1" className="form-label">
                 <b>Number of Rooms</b>
                 </label>
-                <input type="number" className="form-control" name="total_guest" onChange={numOfRoomsHandler} value={numOfRooms}/>
+                <input type="number" className="form-control" name="total_rooms" onChange={numOfRoomsHandler} value={numOfRooms}/>
             </div>
             <div className="mb-3">
                 <label htmlFor="exampleFormControlInput1" className="form-label">
@@ -143,7 +147,7 @@ export default function BookingForm({roomDetails}) {
             </div>
             <hr/>
             <div className="mb-3">
-                <label htmlFor="exampleFormControlInput1" className="form-label">
+                <label htmlFor="exampleFormControlInput1" className="form-label" name="total_price">
                 <b>Total Charge:</b>　$ {totalCost}
                 </label>
             </div>
