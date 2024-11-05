@@ -1,3 +1,5 @@
+"use client"
+import { useEffect,useState } from "react"
 import Link from 'next/link'
 import RoomTypeCard from '@/components/RoomTypeCard'
 
@@ -7,6 +9,18 @@ async function getData(page_num) {
   return data
 }
 export default async function Page({searchParams}) {
+  
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedUser = localStorage.getItem("user");
+      setUser(JSON.parse(storedUser));
+      console.log(user);
+    } else {
+      console.log("window is undefined");
+    }
+  }, []);
   const page =  (await searchParams).page
   const roomTypes = await getData(page)
 

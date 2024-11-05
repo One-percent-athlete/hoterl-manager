@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 
-export default async function BookingForm() {
+export default function BookingForm({roomDetails}) {
   var user = localStorage.getItem("user")
   user = JSON.parse(user)
   var bookingUrl= window.location.pathname
@@ -12,12 +12,12 @@ export default async function BookingForm() {
         <div className="card-body">
         <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">
-            <b>Room Type:</b>　Single
+            <b>Room Type:</b>　{roomDetails.title}
             </label>
         </div>
         <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">
-            <b>Cost:</b>　$ 300 / night
+            <b>Cost:</b>　$ {roomDetails.price_per_night} / night
             </label>
         </div>
         <hr />

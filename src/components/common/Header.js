@@ -1,16 +1,22 @@
 "use client"
-
+import { useEffect,useState } from "react"
 import Link from 'next/link'
 import { Pacifico } from 'next/font/google'
 
 const pacifico = Pacifico({ subsets: ['latin'], weight: '400' })
 export default function Header() {
-    if (localStorage.getItem('user')){
-      var user = localStorage.getItem('user')
-    } else {
-      user=null
-    }
 
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedUser = localStorage.getItem("user");
+      setUser(JSON.parse(storedUser));
+      console.log(user);
+    } else {
+      console.log("window is undefined");
+    }
+  }, []);
   return (
     <div className="hms-bg-dark" data-bs-theme="dark">
       <div className="container">

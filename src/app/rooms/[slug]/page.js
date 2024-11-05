@@ -34,7 +34,7 @@ export default async function Page({params}) {
           </div>
         </div>
         <div className="col-7">
-         <BookingForm />
+         <BookingForm roomDetails={roomDetails}/>
         </div>
       </div>
     </section>
