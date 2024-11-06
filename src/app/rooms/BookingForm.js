@@ -2,7 +2,9 @@
 import { useEffect, useState, useRef } from "react"
 import Link from 'next/link'
 
-export default function BookingForm({roomDetails}) {
+export default function BookingForm({roomDetails, rooms}) {
+
+    const roomsList = rooms.results
 
     const [totalCost, setTotalCost] = useState(0)
     const [totalGuest, setTotalGuest] = useState(1)
@@ -31,7 +33,7 @@ export default function BookingForm({roomDetails}) {
         const _guest=e.target.value
         setTotalGuest(_guest)
     }
-    function numOfRoomsHandler(e) {
+    function RoomHandler(e) {
         const _numOfRooms=e.target.value
         setNumOfRooms(_numOfRooms)
     }
@@ -61,7 +63,6 @@ export default function BookingForm({roomDetails}) {
     const fd = {
       'room_number' : formData.get('total_rooms'),
       'user' : user,
-      'booking_date' : "",
       'total_guest' : formData.get('total_guest'),
       'checkin_date' : formData.get('checkin_date'),
       'checkout_date' : formData.get('checkout_date'),
@@ -76,7 +77,6 @@ export default function BookingForm({roomDetails}) {
   const resData = await res.json()
   
   if (res.ok){
-    setSuccessMsg(true)
     setErrorMsg("")
     resestRefButton.current.click()
   } else {
@@ -87,7 +87,6 @@ export default function BookingForm({roomDetails}) {
              errorStr.push(`${values[i]}`)
          }
     }
-    setSuccessMsg(false)
     setErrorMsg(errorStr)
   }
   }
@@ -117,9 +116,13 @@ export default function BookingForm({roomDetails}) {
             <hr />
             <div className="mb-3">
                 <label htmlFor="exampleFormControlInput1" className="form-label">
-                <b>Number of Rooms</b>
+                <b>Select Rooms</b>
                 </label>
-                <input type="number" className="form-control" name="total_rooms" onChange={numOfRoomsHandler} value={numOfRooms}/>
+                <select className="form-control" name="total_rooms" onChange={RoomHandler}>
+                    {roomsList.map((row, index) => {
+                        return  <option value={row.id} name="room_number">{row.room_number}</option>
+                    })}
+                </select>
             </div>
             <div className="mb-3">
                 <label htmlFor="exampleFormControlInput1" className="form-label">

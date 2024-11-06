@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import RoomImages from '@/components/RoomDetailImages'
 import BookingForm from "../BookingForm"
 
@@ -7,9 +6,18 @@ async function getData(uuid) {
   const data = await res.json()
   return data
 }
+
+async function getRooms(uuid) {
+  const res = await fetch('http://127.0.0.1:8000/api/rooms/' + uuid, {cache: "no-store"})
+  const data = await res.json()
+  return data
+}
+
+
 export default async function Page({params}) {
   const uuid = params.slug
   const roomDetails = await getData(uuid)
+  const rooms = await getRooms(uuid)
   return (
     <section className="container my-5">
       <h3 className="my-5 text-center">{roomDetails.title} Room</h3>
@@ -34,7 +42,7 @@ export default async function Page({params}) {
           </div>
         </div>
         <div className="col-7">
-         <BookingForm roomDetails={roomDetails}/>
+         <BookingForm roomDetails={roomDetails} rooms={rooms}/>
         </div>
       </div>
     </section>
